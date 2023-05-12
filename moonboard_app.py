@@ -29,7 +29,7 @@ st.markdown('Moonboard is a standartised training wall for rock climbers. A boul
 st.markdown('In 2017 setup, grades of diffuculcy range from 6a+ to 8b+. Use the sidebar to select a problem from the test set. The problem will be automatically graded by the already trained neural networks.')
 
 
-@st.cache
+@st.cache_data
 def load_data(path, nrows=0):    
     if nrows == 0:
         data = pd.read_csv(path + '/2017_test_data.csv')
