@@ -26,7 +26,7 @@ st.title("Moonboard AI grader")
 st.sidebar.header('User input parameters')
 
 st.markdown('Moonboard is a standartised training wall for rock climbers. A boulder problem is created by choosing the allowed holds. It then gets graded and repeated by users worldwide.')
-st.markdown('In 2017 setup, grades of diffuculcy range from 6a+ to 8b+. Use the sidebar to select a problem from the test set. The problem will be automatically graded by the already trained neural networks.')
+st.markdown('In 2017 setup, grades of diffuculty range from 6a+ to 8b+. Use the sidebar to select a problem from the test set. The problem will be automatically graded by the already trained neural networks.')
 
 
 @st.cache_data
@@ -59,7 +59,7 @@ def user_input_features(data):
     # grade selector
     grade_names = ['all', '6a+', '6b', '6b+', '6c', '6c+', '7a', '7a+', 
                        '7b', '7b+', '7c', '7c+', '8a', '8a+', '8b', '8b+']
-    grade_name = st.sidebar.select_slider('Difficulcy grade', grade_names)
+    grade_name = st.sidebar.select_slider('Difficulty grade', grade_names)
     if grade_name == 'all':
         grade = -1
     else:
